@@ -4,304 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>Investidor Inteligente</title>
-  <style>
-    /* Reset e base */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #0c0c0f;
-      color: #e0e0e0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px 15px 60px;
-      flex-grow: 1;
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      background: linear-gradient(rgba(6, 0, 43, 0.75), rgba(6, 0, 43, 0.75)),
-                  url('cabeçalho.jpg') center center/cover no-repeat;
-      padding: 120px 30px 80px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgb(0 0 0 / 0.7);
-      color: #00d8ff;
-      user-select: none;
-    }
-    .hero h1 {
-      font-weight: 900;
-      font-size: 3.8rem;
-      margin: 0 0 15px;
-      text-shadow: 0 3px 12px rgb(0 216 255 / 0.85);
-      line-height: 1.1;
-    }
-    .hero p {
-      font-weight: 400;
-      font-size: 1.3rem;
-      margin-bottom: 35px;
-      color: #c7f0ffcc;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-      text-shadow: 0 2px 6px rgb(0 0 0 / 0.4);
-    }
-    .btn-gradient {
-      display: inline-block;
-      background: linear-gradient(135deg, #00d8ff 0%, #6b00ff 100%);
-      color: white;
-      padding: 16px 48px;
-      font-weight: 700;
-      font-size: 1.3rem;
-      border-radius: 60px;
-      box-shadow: 0 0 25px #00d8ffaa;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      white-space: nowrap;
-    }
-    .btn-gradient:hover,
-    .btn-gradient:focus {
-      transform: scale(1.08);
-      box-shadow: 0 0 40px #00d8ffdd;
-      outline: none;
-    }
-
-    /* Sections */
-    section {
-      margin-top: 65px;
-      background: #121217;
-      padding: 30px 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgb(6 0 43 / 0.4);
-    }
-    section h2 {
-      font-size: 2.4rem;
-      color: #00d8ff;
-      margin-bottom: 28px;
-      font-weight: 800;
-      text-align: center;
-      text-shadow: 0 2px 10px rgb(0 216 255 / 0.6);
-      user-select: none;
-    }
-    ul, .item-list {
-      list-style: none;
-      padding: 0;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    ul li, .item-list li {
-      background: #1b1b26;
-      margin-bottom: 18px;
-      padding: 16px 24px;
-      border-left: 6px solid #00d8ff;
-      border-radius: 8px;
-      font-size: 1.15rem;
-      color: #d6e6f1dd;
-      font-weight: 600;
-      box-shadow: 0 5px 14px rgb(0 216 255 / 0.15);
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-    ul li:hover {
-      background-color: #273045;
-    }
-    .item-list span {
-      color: #ffffffcc;
-      font-weight: 800;
-    }
-
-    /* Depoimentos */
-    .depoimento {
-      background: #191925;
-      border-left: 7px solid #6b00ff;
-      margin-bottom: 18px;
-      padding: 22px 26px;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #b6b6c3;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgb(107 0 255 / 0.2);
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      user-select: none;
-    }
-
-    /* Garantia */
-    section ul li:last-child {
-      margin-bottom: 0;
-    }
-
-    /* CTA Final */
-    .cta-final {
-      background: linear-gradient(135deg, #6b00ff 0%, #00d8ff 100%);
-      padding: 48px 25px;
-      border-radius: 20px;
-      text-align: center;
-      color: #e6e6ff;
-      box-shadow: 0 0 30px #6b00ffbb;
-      user-select: none;
-      margin-top: 70px;
-    }
-    .cta-final h2 {
-      font-size: 2.8rem;
-      font-weight: 900;
-      margin-bottom: 25px;
-      text-shadow: 0 0 10px #b16effcc;
-      color: white;
-    }
-    .cta-final ul {
-      max-width: 520px;
-      margin: 0 auto 35px;
-    }
-    .cta-final ul li {
-      background: rgba(255 255 255 / 0.15);
-      border-left: 8px solid #ffffffcc;
-      margin-bottom: 15px;
-      padding: 16px 22px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      color: #fff;
-      box-shadow: 0 4px 12px rgb(255 255 255 / 0.3);
-      transition: background-color 0.25s ease;
-    }
-    .cta-final ul li:hover {
-      background: rgba(255 255 255 / 0.25);
-    }
-    .cta-final .btn-gradient {
-      background: #fff;
-      color: #6b00ff;
-      padding: 18px 50px;
-      font-size: 1.4rem;
-      box-shadow: 0 0 35px #6b00ffbb;
-      font-weight: 900;
-      border-radius: 50px;
-      white-space: nowrap;
-    }
-    .cta-final .btn-gradient:hover,
-    .cta-final .btn-gradient:focus {
-      background: #d6b8ff;
-      color: #37008c;
-      box-shadow: 0 0 40px #37008cbb;
-      transform: scale(1.08);
-    }
-
-    /* Rodapé */
-    footer {
-      background: #0a0a10;
-      text-align: center;
-      padding: 28px 15px;
-      font-size: 0.9rem;
-      color: #8888aa;
-      user-select: none;
-      border-top: 1px solid #1a1a2f;
-    }
-    footer a {
-      color: #00d8ff;
-      margin: 0 14px;
-      transition: color 0.3s ease;
-      font-weight: 600;
-    }
-    footer a:hover {
-      color: #6b00ff;
-      text-decoration: underline;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.6rem;
-      }
-      .hero p {
-        font-size: 1.1rem;
-      }
-      .btn-gradient {
-        padding: 14px 36px;
-        font-size: 1.1rem;
-      }
-      section {
-        margin-top: 45px;
-        padding: 25px 15px;
-      }
-      section h2 {
-        font-size: 2rem;
-      }
-      ul li, .item-list li {
-        font-size: 1rem;
-        padding: 14px 18px;
-      }
-      .cta-final h2 {
-        font-size: 2.4rem;
-      }
-      .cta-final ul li {
-        font-size: 1.1rem;
-        padding: 14px 18px;
-      }
-      .cta-final .btn-gradient {
-        padding: 16px 40px;
-        font-size: 1.25rem;
-      }
-    }
-    @media (max-width: 400px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .btn-gradient {
-        padding: 12px 28px;
-        font-size: 1rem;
-      }
-      section h2 {
-        font-size: 1.7rem;
-      }
-      ul li, .item-list li {
-        font-size: 0.95rem;
-      }
-      .cta-final h2 {
-        font-size: 1.9rem;
-      }
-      .cta-final ul li {
-        font-size: 1rem;
-      }
-      .cta-final .btn-gradient {
-        padding: 14px 32px;
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
+  <header id="header">
+    <div class="container header-container">
+      <div class="logo">Investidor Inteligente</div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#aprenda">O que você vai aprender</a></li>
+          <li><a href="#incluso">O que está incluso</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#garantia">Garantia</a></li>
+          <li><a href="#cta">Começar</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero" role="banner">
+  <main class="container">
+    <section class="hero" id="hero" role="banner">
       <h1>Investidor Inteligente</h1>
       <p>Aprenda a investir com segurança e comece sua liberdade financeira agora mesmo</p>
-      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-gradient" target="_blank" rel="noopener noreferrer" role="button">🔵 Quero Começar Agora</a>
+      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-gradient" target="_blank" rel="noopener noreferrer">🔵 Quero Começar Agora</a>
     </section>
 
-    <!-- O que você vai aprender -->
-    <section aria-labelledby="aprenda-titulo">
+    <section id="aprenda" aria-labelledby="aprenda-titulo" class="fade-in">
       <h2 id="aprenda-titulo">O que você vai aprender</h2>
       <ul>
         <li>Montar uma carteira de investimentos segura</li>
@@ -312,26 +42,23 @@
       </ul>
     </section>
 
-    <!-- O que está incluso -->
-    <section aria-labelledby="incluso-titulo">
+    <section id="incluso" aria-labelledby="incluso-titulo" class="fade-in">
       <h2 id="incluso-titulo">O que está incluso no produto</h2>
       <ul class="item-list">
-        <li>📘 <span>E-book completo:</span> Guia direto, prático e explicativo para iniciantes</li>
-        <li>🎥 <span>Videoaula:</span> Narração com exemplos visuais e passo a passo</li>
-        <li>📊 <span>Planilhas:</span> Organize e simule sua carteira de investimentos</li>
-        <li>🎁 <span>Bônus:</span> Guia do IR + Checklist da Liberdade Financeira</li>
+        <li>📘 <strong>E-book completo:</strong> Guia direto, prático e explicativo para iniciantes</li>
+        <li>🎥 <strong>Videoaula:</strong> Narração com exemplos visuais e passo a passo</li>
+        <li>📊 <strong>Planilhas:</strong> Organize e simule sua carteira de investimentos</li>
+        <li>🎁 <strong>Bônus:</strong> Guia do IR + Checklist da Liberdade Financeira</li>
       </ul>
     </section>
 
-    <!-- Depoimentos -->
-    <section aria-labelledby="depoimentos-titulo">
+    <section id="depoimentos" aria-labelledby="depoimentos-titulo" class="fade-in">
       <h2 id="depoimentos-titulo">Depoimentos</h2>
       <div class="depoimento">"Depois desse material, nunca mais perdi dinheiro em decisões ruins."</div>
       <div class="depoimento">"Finalmente entendi como funciona o mercado sem depender de ninguém."</div>
     </section>
 
-    <!-- Garantia -->
-    <section aria-labelledby="garantia-titulo">
+    <section id="garantia" aria-labelledby="garantia-titulo" class="fade-in">
       <h2 id="garantia-titulo">Garantia</h2>
       <ul>
         <li>Você tem <strong>7 dias de garantia incondicional</strong>.</li>
@@ -339,25 +66,24 @@
       </ul>
     </section>
 
-    <!-- CTA Final -->
-    <section class="cta-final" aria-labelledby="cta-titulo">
+    <section id="cta" class="cta-final fade-in" aria-labelledby="cta-titulo">
       <h2 id="cta-titulo">Sua jornada como investidor inteligente começa agora.</h2>
       <ul>
         <li>✅ Acesso vitalício</li>
         <li>✅ Conteúdo prático e direto</li>
         <li>✅ Entrega imediata por e-mail</li>
       </ul>
-      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-gradient" target="_blank" rel="noopener noreferrer" role="button">🔵 Quero começar agora</a>
+      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-gradient" target="_blank" rel="noopener noreferrer">🔵 Quero começar agora</a>
     </section>
+  </main>
 
-  </div>
-
-  <!-- RODAPÉ -->
   <footer>
     © 2025 Investidor Inteligente. Todos os direitos reservados.<br />
     <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener noreferrer">Suporte no WhatsApp</a> |
     <a href="#">Política de Reembolso</a> |
     <a href="#">Contato</a>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
