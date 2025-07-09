@@ -2,88 +2,104 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Investidor Inteligente</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header id="header">
-    <div class="container header-container">
-      <div class="logo">Investidor Inteligente</div>
-      <nav id="nav">
-        <ul>
-          <li><a href="#aprenda">O que você vai aprender</a></li>
-          <li><a href="#incluso">O que está incluso</a></li>
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="logo.jpg" alt="Logo Investidor Inteligente" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#aprenda">Aprenda</a></li>
+          <li><a href="#incluso">Incluso</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#garantia">Garantia</a></li>
-          <li><a href="#cta">Começar</a></li>
+          <li><a href="#cta">Comece Agora</a></li>
         </ul>
       </nav>
-      <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero" id="hero" role="banner">
+  <section class="hero" style="background-image: url('cabecalho.jpg');">
+    <div class="hero-content container">
       <h1>Investidor Inteligente</h1>
       <p>Aprenda a investir com segurança e comece sua liberdade financeira agora mesmo</p>
-      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-gradient" target="_blank" rel="noopener noreferrer">🔵 Quero Começar Agora</a>
-    </section>
+      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-primary">🔵 Quero Começar Agora</a>
+    </div>
+  </section>
 
-    <section id="aprenda" aria-labelledby="aprenda-titulo" class="fade-in">
-      <h2 id="aprenda-titulo">O que você vai aprender</h2>
-      <ul>
-        <li>Montar uma carteira de investimentos segura</li>
-        <li>Entender onde aplicar seu dinheiro</li>
-        <li>Proteger seu patrimônio em tempos de crise</li>
-        <li>Investir em CDI, Tesouro Direto, FIIs, Ações, etc.</li>
-        <li>Entender o básico sobre IR, rentabilidade e diversificação</li>
+  <section id="aprenda" class="section container">
+    <h2>O que você vai aprender</h2>
+    <div class="grid-2">
+      <ul class="checklist">
+        <li>✅ Montar uma carteira de investimentos segura</li>
+        <li>✅ Entender onde aplicar seu dinheiro</li>
+        <li>✅ Proteger seu patrimônio em tempos de crise</li>
+        <li>✅ Investir em CDI, Tesouro Direto, FIIs, Ações, etc.</li>
+        <li>✅ Entender o básico sobre IR, rentabilidade e diversificação</li>
       </ul>
-    </section>
+      <img src="ilustracao-aprenda.jpg" alt="Ilustração do conhecimento" class="img-ilustrativa" />
+    </div>
+  </section>
 
-    <section id="incluso" aria-labelledby="incluso-titulo" class="fade-in">
-      <h2 id="incluso-titulo">O que está incluso no produto</h2>
-      <ul class="item-list">
-        <li>📘 <strong>E-book completo:</strong> Guia direto, prático e explicativo para iniciantes</li>
-        <li>🎥 <strong>Videoaula:</strong> Narração com exemplos visuais e passo a passo</li>
-        <li>📊 <strong>Planilhas:</strong> Organize e simule sua carteira de investimentos</li>
-        <li>🎁 <strong>Bônus:</strong> Guia do IR + Checklist da Liberdade Financeira</li>
-      </ul>
-    </section>
+  <section id="incluso" class="section container">
+    <h2>O que está incluso</h2>
+    <div class="incluso-grid">
+      <div class="item-incluso">
+        <img src="mockup-ebook.jpg" alt="Mockup do e-book" />
+        <p><strong>📘 E-book completo</strong><br>Guia direto, prático e explicativo para iniciantes</p>
+      </div>
+      <div class="item-incluso">
+        <img src="videoaula.jpg" alt="Thumb da videoaula" />
+        <p><strong>🎥 Videoaula</strong><br>Narração com exemplos visuais e passo a passo</p>
+      </div>
+      <div class="item-incluso">
+        <img src="planilha.jpg" alt="Imagem de planilha" />
+        <p><strong>📊 Planilhas</strong><br>Organize e simule sua carteira de investimentos</p>
+      </div>
+      <div class="item-incluso">
+        <img src="bonus.jpg" alt="Imagem bônus" />
+        <p><strong>🎁 Bônus</strong><br>Guia do IR + Checklist da Liberdade Financeira</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="depoimentos" aria-labelledby="depoimentos-titulo" class="fade-in">
-      <h2 id="depoimentos-titulo">Depoimentos</h2>
-      <div class="depoimento">"Depois desse material, nunca mais perdi dinheiro em decisões ruins."</div>
-      <div class="depoimento">"Finalmente entendi como funciona o mercado sem depender de ninguém."</div>
-    </section>
+  <section id="depoimentos" class="section container">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <blockquote>"Depois desse material, nunca mais perdi dinheiro em decisões ruins."</blockquote>
+      <blockquote>"Finalmente entendi como funciona o mercado sem depender de ninguém."</blockquote>
+    </div>
+  </section>
 
-    <section id="garantia" aria-labelledby="garantia-titulo" class="fade-in">
-      <h2 id="garantia-titulo">Garantia</h2>
-      <ul>
-        <li>Você tem <strong>7 dias de garantia incondicional</strong>.</li>
-        <li>Se não gostar do conteúdo, é só pedir reembolso pela Kiwify. Sem burocracia, sem letras miúdas.</li>
-      </ul>
-    </section>
+  <section id="garantia" class="section container garantia">
+    <img src="selo-garantia.jpg" alt="Selo de Garantia" class="selo-garantia" />
+    <div>
+      <h2>Garantia de 7 Dias</h2>
+      <p>Você tem 7 dias de garantia incondicional. Se não gostar do conteúdo, é só pedir reembolso diretamente pela Kiwify. Sem burocracia, sem letras miúdas.</p>
+    </div>
+  </section>
 
-    <section id="cta" class="cta-final fade-in" aria-labelledby="cta-titulo">
-      <h2 id="cta-titulo">Sua jornada como investidor inteligente começa agora.</h2>
-      <ul>
-        <li>✅ Acesso vitalício</li>
-        <li>✅ Conteúdo prático e direto</li>
-        <li>✅ Entrega imediata por e-mail</li>
-      </ul>
-      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-gradient" target="_blank" rel="noopener noreferrer">🔵 Quero começar agora</a>
-    </section>
-  </main>
+  <section id="cta" class="cta-final">
+    <h2>Sua jornada como investidor inteligente começa agora.</h2>
+    <ul>
+      <li>✅ Acesso vitalício</li>
+      <li>✅ Conteúdo prático e direto</li>
+      <li>✅ Entrega imediata por e-mail</li>
+    </ul>
+    <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-primary">🔵 Quero começar agora</a>
+  </section>
 
-  <footer>
-    © 2025 Investidor Inteligente. Todos os direitos reservados.<br />
-    <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener noreferrer">Suporte no WhatsApp</a> |
-    <a href="#">Política de Reembolso</a> |
-    <a href="#">Contato</a>
+  <footer class="footer">
+    <p>© 2025 Investidor Inteligente - Todos os direitos reservados.</p>
+    <p>
+      <a href="https://wa.me/SEUNUMERO" target="_blank">Suporte por WhatsApp</a> |
+      <a href="#">Política de reembolso</a> |
+      <a href="#">Contato</a>
+    </p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,364 +1,228 @@
-/* Reset e base */
-* {
-  box-sizing: border-box;
-}
+/* style.css - Estilos do site Investidor Inteligente */
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0c0c0f;
-  color: #e0e0e0;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0e0e10;
+  color: #ffffff;
 }
 
 .container {
-  max-width: 960px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px 15px 60px;
-  flex-grow: 1;
 }
 
 /* HEADER */
-header {
-  position: fixed;
+.site-header {
+  background: #111;
+  padding: 20px 0;
+  position: sticky;
   top: 0;
-  left: 0; right: 0;
-  background: rgba(6, 0, 43, 0.95);
-  backdrop-filter: saturate(180%) blur(10px);
-  z-index: 1000;
-  box-shadow: 0 3px 14px rgb(0 0 0 / 0.85);
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
-.header-container {
+
+.header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 25px;
-  max-width: 960px;
-  margin: auto;
-}
-.logo {
-  color: #00d8ff;
-  font-weight: 900;
-  font-size: 1.8rem;
-  letter-spacing: 1.4px;
-  user-select: none;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0; padding: 0;
-}
-nav ul li {
-  margin-left: 28px;
-}
-nav ul li a {
-  font-weight: 600;
-  color: #a3dfffcc;
-  padding: 10px 14px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-nav ul li a:hover,
-nav ul li a:focus {
-  background-color: #00d8ff33;
-  color: #00e0ff;
-  outline: none;
 }
 
-/* Botão menu hamburguer mobile */
-#menu-toggle {
-  display: none;
-  font-size: 2.2rem;
-  color: #00d8ffcc;
-  background: none;
-  border: none;
-  cursor: pointer;
-  user-select: none;
+.logo {
+  max-height: 50px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffffff;
 }
 
 /* HERO */
 .hero {
-  margin-top: 90px;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  text-align: center;
+  color: #00e0ff;
   position: relative;
-  background:
-    linear-gradient(rgba(6,0,43,0.8), rgba(6,0,43,0.8)),
-    url('cabeçalho.jpg') center/cover no-repeat;
-  padding: 140px 30px 90px;
-  border-radius: 14px;
-  text-align: center;
-  color: #00d8ff;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.7);
-  user-select: none;
-}
-.hero h1 {
-  font-weight: 900;
-  font-size: 3.8rem;
-  margin-bottom: 15px;
-  line-height: 1.1;
-  text-shadow: 0 3px 12px rgb(0 216 255 / 0.85);
-}
-.hero p {
-  font-weight: 400;
-  font-size: 1.3rem;
-  margin-bottom: 35px;
-  color: #c7f0ffcc;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 2px 6px rgb(0 0 0 / 0.4);
 }
 
-/* Botões */
-.btn-gradient {
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
   display: inline-block;
-  background: linear-gradient(135deg, #00d8ff 0%, #6b00ff 100%);
-  color: white;
-  padding: 16px 48px;
-  font-weight: 700;
-  font-size: 1.3rem;
-  border-radius: 60px;
-  box-shadow: 0 0 25px #00d8ffaa;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  white-space: nowrap;
-  user-select: none;
-}
-.btn-gradient:hover,
-.btn-gradient:focus {
-  transform: scale(1.08);
-  box-shadow: 0 0 40px #00d8ffdd;
-  outline: none;
+  background: linear-gradient(135deg, #00e0ff, #6b00ff);
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px #00e0ff88;
 }
 
-/* Sections */
-section {
-  margin-top: 65px;
-  background: #121217;
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgb(6 0 43 / 0.4);
-  user-select: none;
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00e0ffcc;
 }
-section h2 {
-  font-size: 2.4rem;
-  color: #00d8ff;
-  margin-bottom: 28px;
-  font-weight: 800;
+
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
+
+h2 {
   text-align: center;
-  text-shadow: 0 2px 10px rgb(0 216 255 / 0.6);
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #00e0ff;
 }
-ul, .item-list {
+
+.grid-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.checklist {
+  flex: 1;
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  background: #1a1a1f;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-left: 5px solid #00e0ff;
+  border-radius: 5px;
+}
+
+.img-ilustrativa {
+  max-width: 400px;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.incluso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.item-incluso {
+  background: #1a1a1f;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00e0ff22;
+}
+
+.item-incluso img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.depoimentos blockquote {
+  background: #1f1f28;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #6b00ff;
+  border-radius: 5px;
+  font-style: italic;
+  box-shadow: 0 0 10px #6b00ff22;
+}
+
+.garantia {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.selo-garantia {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.cta-final {
+  background: linear-gradient(to right, #6b00ff, #00e0ff);
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.cta-final h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-final ul {
   list-style: none;
   padding: 0;
-  max-width: 700px;
-  margin: 0 auto;
-}
-ul li, .item-list li {
-  background: #1b1b26;
-  margin-bottom: 18px;
-  padding: 16px 24px;
-  border-left: 6px solid #00d8ff;
-  border-radius: 8px;
-  font-size: 1.15rem;
-  color: #d6e6f1dd;
-  font-weight: 600;
-  box-shadow: 0 5px 14px rgb(0 216 255 / 0.15);
-  transition: background-color 0.3s ease;
-}
-ul li:hover {
-  background-color: #273045;
+  margin-bottom: 30px;
 }
 
-/* Depoimentos */
-.depoimento {
-  background: #191925;
-  border-left: 7px solid #6b00ff;
-  margin-bottom: 18px;
-  padding: 22px 26px;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #b6b6c3;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgb(107 0 255 / 0.2);
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Garantia */
-section ul li:last-child {
-  margin-bottom: 0;
-}
-
-/* CTA Final */
-.cta-final {
-  background: linear-gradient(135deg, #6b00ff 0%, #00d8ff 100%);
-  padding: 48px 25px;
-  border-radius: 20px;
-  text-align: center;
-  color: #e6e6ff;
-  box-shadow: 0 0 30px #6b00ffbb;
-  margin-top: 70px;
-}
-.cta-final h2 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  margin-bottom: 25px;
-  text-shadow: 0 0 10px #b16effcc;
-  color: white;
-}
-.cta-final ul {
-  max-width: 520px;
-  margin: 0 auto 35px;
-}
 .cta-final ul li {
-  background: rgba(255 255 255 / 0.15);
-  border-left: 8px solid #ffffffcc;
-  margin-bottom: 15px;
-  padding: 16px 22px;
-  font-weight: 700;
   font-size: 1.2rem;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(255 255 255 / 0.3);
-  transition: background-color 0.25s ease;
-}
-.cta-final ul li:hover {
-  background: rgba(255 255 255 / 0.25);
+  margin-bottom: 10px;
 }
 
-/* Rodapé */
-footer {
-  background: #0a0a10;
+.footer {
+  background: #111;
+  color: #aaa;
   text-align: center;
-  padding: 28px 15px;
+  padding: 30px 10px;
   font-size: 0.9rem;
-  color: #8888aa;
-  border-top: 1px solid #1a1a2f;
-  user-select: none;
 }
-footer a {
-  color: #00d8ff;
-  margin: 0 14px;
-  transition: color 0.3s ease;
-  font-weight: 600;
+
+.footer a {
+  color: #00e0ff;
+  text-decoration: none;
+  margin: 0 8px;
 }
-footer a:hover {
-  color: #6b00ff;
+
+.footer a:hover {
   text-decoration: underline;
 }
 
-/* Animação fade-in */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-  nav ul {
+  .grid-2 {
     flex-direction: column;
-    background: #080818;
-    position: fixed;
-    top: 64px;
-    right: -100%;
-    width: 220px;
-    height: calc(100vh - 64px);
-    padding-top: 30px;
-    box-shadow: -5px 0 20px rgb(6 0 43 / 0.8);
-    transition: right 0.3s ease;
-    border-radius: 0 0 0 10px;
+    align-items: center;
   }
-  nav ul.open {
-    right: 0;
+  .garantia {
+    flex-direction: column;
+    text-align: center;
   }
-  nav ul li {
-    margin: 0 0 28px 20px;
-  }
-  nav ul li a {
-    font-size: 1.2rem;
-    padding: 10px 15px;
-    color: #00d8ff;
-  }
-  #menu-toggle {
-    display: block;
-  }
-  .container {
-    padding: 20px 15px 80px;
-  }
-  .hero {
-    padding: 120px 20px 80px;
-  }
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-  }
-  .btn-gradient {
-    padding: 14px 36px;
-    font-size: 1.1rem;
-  }
-  section {
-    margin-top: 45px;
-    padding: 25px 15px;
-  }
-  section h2 {
-    font-size: 2rem;
-  }
-  ul li, .item-list li {
-    font-size: 1rem;
-    padding: 14px 18px;
-  }
-  .cta-final h2 {
-    font-size: 2.4rem;
-  }
-  .cta-final ul li {
-    font-size: 1.1rem;
-    padding: 14px 18px;
-  }
-  .cta-final .btn-gradient {
-    padding: 16px 40px;
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 400px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .btn-gradient {
-    padding: 12px 28px;
-    font-size: 1rem;
-  }
-  section h2 {
-    font-size: 1.7rem;
-  }
-  ul li, .item-list li {
-    font-size: 0.95rem;
-  }
-  .cta-final h2 {
-    font-size: 1.9rem;
-  }
-  .cta-final ul li {
-    font-size: 1rem;
-  }
-  .cta-final .btn-gradient {
-    padding: 14px 32px;
-    font-size: 1.1rem;
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
   }
 }
