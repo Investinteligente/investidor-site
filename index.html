@@ -53,8 +53,8 @@
 
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
+      margin-top: 20px;
+      padding: 12px 25px;
       background-color: var(--accent);
       color: #000;
       font-weight: bold;
@@ -117,7 +117,7 @@
 
     .produto {
       background-color: #1a1a1a;
-      padding: 20px;
+      padding: 25px;
       border-radius: 15px;
       max-width: 300px;
       text-align: center;
@@ -128,6 +128,13 @@
       font-size: 1.5rem;
       color: var(--accent);
       margin-bottom: 15px;
+    }
+
+    .preco {
+      font-size: 1.3rem;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 15px 0;
     }
 
     footer {
@@ -175,26 +182,42 @@
   <section>
     <h2>Escolha seu pacote</h2>
     <div class="produtos-container">
+      <!-- Produto 1 -->
       <div class="produto">
         <h3>Apenas E-book</h3>
         <img src="ebook.jpg" alt="Capa do E-book Investidor Inteligente" class="ebook-image" />
+        <p style="margin-top: 20px;">
+          Guia prático, direto ao ponto, com linguagem simples para quem quer começar a investir com segurança, mesmo sem nenhuma experiência anterior.
+        </p>
+        <div class="preco">R$ 25,00</div>
         <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn">Comprar E-book</a>
       </div>
+
+      <!-- Produto 2 -->
       <div class="produto">
         <h3>Em breve: E-book + Videoaula</h3>
         <img src="videoaula.jpg" alt="Imagem da Videoaula Investidor Inteligente" class="videoaula-image" />
-        <p>Conteúdo visual e explicativo para você fixar melhor os conceitos e aprender de forma mais dinâmica. Ideal para quem prefere aprender assistindo.</p>
-        <span class="btn" style="background-color: grey; cursor: not-allowed;">Disponível em breve</span>
+        <p style="margin-top: 20px;">
+          Explicações visuais com exemplos práticos para reforçar o aprendizado. Ideal para quem prefere assistir em vez de ler.
+        </p>
+        <div class="preco">Disponível em breve</div>
+        <span class="btn" style="background-color: grey; cursor: not-allowed;">Aguarde</span>
       </div>
+
+      <!-- Produto 3 -->
       <div class="produto">
         <h3>Em breve: Pacote Completo</h3>
         <img src="bonus.jpg" alt="Bônus Exclusivos do Investidor Inteligente" class="bonus-image" />
-        <p>Pacote premium com ferramentas extras: planilhas de simulação, checklist da liberdade financeira e guia de imposto de renda para investidores.</p>
-        <span class="btn" style="background-color: grey; cursor: not-allowed;">Disponível em breve</span>
+        <p style="margin-top: 20px;">
+          E-book + videoaula + bônus: planilhas inteligentes, checklist da liberdade e guia completo de IR para investidores.
+        </p>
+        <div class="preco">Disponível em breve</div>
+        <span class="btn" style="background-color: grey; cursor: not-allowed;">Aguarde</span>
       </div>
     </div>
+
     <p style="text-align: center; color: var(--text-secondary); margin-top: 40px; font-size: 1rem;">
-      <em>⚠️ As videoaulas e bônus estão em fase final de produção e serão lançados em breve.</em>
+      <em>⚠️ Os pacotes com videoaula e bônus serão lançados em breve. Fique atento!</em>
     </p>
   </section>
 
