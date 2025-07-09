@@ -1,106 +1,176 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html> 
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Investidor Inteligente</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0d0d0d;
+      --accent: #d4af37;
+      --text-primary: #ffffff;
+      --text-secondary: #cccccc;
+      --font-title: 'Playfair Display', serif;
+      --font-body: 'Roboto', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    header {
+      background-image: url('cabecalho-futuro.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 100px 20px;
+      color: var(--text-primary);
+    }
+
+    header h1 {
+      font-family: var(--font-title);
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: var(--accent);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #f1c93b;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    section p,
+    ul li {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "\2713";
+      color: var(--accent);
+      margin-right: 10px;
+    }
+
+    .ebook-image {
+      display: block;
+      margin: 40px auto;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: #0a0a0a;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      section h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-flex">
-      <img src="logo.jpg" alt="Logo Investidor Inteligente" class="logo" />
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#aprenda">Aprenda</a></li>
-          <li><a href="#incluso">Incluso</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#garantia">Garantia</a></li>
-          <li><a href="#cta">Comece Agora</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>Investidor Inteligente</h1>
+    <p>Domine os investimentos e construa sua liberdade financeira com o guia que já transformou iniciantes em investidores confiantes.</p>
+    <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn">Quero Começar Agora</a>
   </header>
 
-  <section class="hero" style="background-image: url('cabecalho-futuro.jpg');">
-    <div class="hero-content container">
-      <h1>Invista no seu Futuro com Segurança</h1>
-      <p>Transforme sua vida financeira com conhecimento acessível, direto e confiável. Comece agora sua jornada como investidor inteligente.</p>
-      <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-primary">🔵 Quero Começar Agora</a>
-    </div>
-  </section>
-
-  <section id="aprenda" class="section container">
+  <section>
     <h2>O que você vai aprender</h2>
-    <div class="grid-2">
-      <ul class="checklist">
-        <li>✅ Montar uma carteira de investimentos segura</li>
-        <li>✅ Entender onde aplicar seu dinheiro com consciência</li>
-        <li>✅ Proteger seu patrimônio e pensar no longo prazo</li>
-        <li>✅ Investir com inteligência emocional e estratégica</li>
-        <li>✅ Dominar conceitos como CDI, FIIs, Tesouro Direto, IR e muito mais</li>
-      </ul>
-      <img src="ilustracao-aprenda-2.jpg" alt="Aprendizado com propósito" class="img-ilustrativa" />
-    </div>
-  </section>
-
-  <section id="incluso" class="section container">
-    <h2>O que está incluso</h2>
-    <div class="incluso-grid">
-      <div class="item-incluso">
-        <img src="mockup-ebook-novo.jpg" alt="Mockup do e-book" />
-        <p><strong>📘 E-book completo</strong><br>Explicações claras e práticas para você investir com segurança desde o início</p>
-      </div>
-      <div class="item-incluso">
-        <img src="videoaula-nova.jpg" alt="Thumb da videoaula" />
-        <p><strong>🎥 Videoaula</strong><br>Exemplos reais, explicações visuais e passo a passo didático</p>
-      </div>
-      <div class="item-incluso">
-        <img src="planilha-nova.jpg" alt="Imagem de planilha" />
-        <p><strong>📊 Planilhas interativas</strong><br>Simule sua carteira e organize sua evolução com clareza</p>
-      </div>
-      <div class="item-incluso">
-        <img src="bonus-futuro.jpg" alt="Imagem bônus" />
-        <p><strong>🎁 Bônus Exclusivos</strong><br>Checklist da Liberdade + Guia de Imposto de Renda simplificado</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="depoimentos" class="section container">
-    <h2>Transformações Reais</h2>
-    <div class="depoimentos">
-      <blockquote>“Depois desse conteúdo, nunca mais investi no escuro. Pela primeira vez, sei o que estou fazendo com meu dinheiro.”</blockquote>
-      <blockquote>“Consegui montar uma reserva e entender onde aplicar. Já compartilhei com toda minha família!”</blockquote>
-    </div>
-  </section>
-
-  <section id="garantia" class="section container garantia">
-    <img src="selo-garantia.jpg" alt="Selo de Garantia" class="selo-garantia" />
-    <div>
-      <h2>Garantia de 7 Dias</h2>
-      <p>Você tem 7 dias para testar tudo sem riscos. Se não gostar, o reembolso é simples e direto pela Kiwify. Confiança total no conteúdo.</p>
-    </div>
-  </section>
-
-  <section id="cta" class="cta-final">
-    <h2>Seu futuro começa agora. Dê o primeiro passo.</h2>
     <ul>
-      <li>✅ Acesso vitalício ao conteúdo</li>
-      <li>✅ Suporte para tirar dúvidas</li>
-      <li>✅ Material atualizado e direto ao ponto</li>
+      <li>Montar uma carteira de investimentos segura e diversificada</li>
+      <li>Investir com consciência em Tesouro Direto, CDI, FIIs e mais</li>
+      <li>Interpretar indicadores e notícias do mercado</li>
+      <li>Evitar erros que fazem iniciantes perderem dinheiro</li>
     </ul>
-    <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn-primary">🔵 Quero começar agora</a>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 Investidor Inteligente - Todos os direitos reservados.</p>
-    <p>
-      <a href="https://wa.me/SEUNUMERO" target="_blank">Suporte por WhatsApp</a> |
-      <a href="#">Política de reembolso</a> |
-      <a href="#">Contato</a>
-    </p>
+  <section>
+    <h2>O que está incluso no pacote</h2>
+    <ul>
+      <li>E-book completo com estratégias práticas</li>
+      <li>Videoaula com explicação visual e clara</li>
+      <li>Planilhas para controle e simulação de investimentos</li>
+      <li>Bônus: Guia de IR + Checklist da Liberdade Financeira</li>
+    </ul>
+    <img src="mockup-ebook-novo.jpg" alt="Capa do E-book Investidor Inteligente" class="ebook-image" />
+  </section>
+
+  <section>
+    <h2>Por que confiar?</h2>
+    <p>Este material foi desenvolvido com base em princípios testados por investidores profissionais, mas com linguagem acessível a qualquer pessoa. Um verdadeiro atalho para quem quer começar certo.</p>
+  </section>
+
+  <section>
+    <h2>Garantia Total</h2>
+    <p>Você tem 7 dias de garantia. Se o conteúdo não te ajudar como prometido, pode solicitar reembolso diretamente pela plataforma.</p>
+  </section>
+
+  <section style="text-align: center;">
+    <h2>Comece agora</h2>
+    <p>Receba tudo agora mesmo e comece sua jornada como investidor inteligente.</p>
+    <a href="https://pay.kiwify.com.br/RVE2L8v" class="btn">Comprar Agora</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Investidor Inteligente. Todos os direitos reservados.
   </footer>
 </body>
+
 </html>
